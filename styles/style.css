@@ -138,3 +138,21 @@ nav {
 
 
 /* Meet the speakers section style */
+.meet-the-speakers-parent {
+    max-width: 1700px;
+    margin: 10px auto;
+}
+
+.meet-the-speakers-parent h1 {
+    text-align: center;
+    margin: 85px auto;
+    font-size: 65px;
+    color: #000102;
+    font-family: inter;
+}
+
+
+/* meet-the-speakers-cards-parent style */
+.meet-the-speakers-cards-parent {
+    
+}
