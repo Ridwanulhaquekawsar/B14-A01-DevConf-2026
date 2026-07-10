@@ -1,0 +1,140 @@
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* navigation style */
+nav {
+    max-width: 1551px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px auto;
+}
+
+
+/* left nav style */
+.nav-left-icon-parent img {
+    height: 60px;
+}
+
+/* middle item style */
+.nav-middle-items {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-middle-items-parent ul {
+    list-style: none;
+}
+
+.nav-middle-items-parent ul a {
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.nav-middle-items-parent ul .Speakers a {
+    font-family: inter;
+    color: #575757;
+}
+
+.nav-middle-items-parent ul .Schedule a {
+    font-family: Arimo;
+    color: #575757;
+}
+
+.nav-middle-items-parent ul .Tracks a {
+    color: #575757;
+    font-family: Arimo;
+    font-weight: 450;
+}
+
+.nav-middle-items-parent ul .Venue a {
+    color: #575757;
+    font-family: Arimo;
+    font-weight: 500;
+}
+
+.nav-middle-items-parent ul .Blog a {
+    color: #575757;
+    font-family: Arimo;
+    font-weight: 600;
+}
+
+/* right nav style */
+.nav-right-button-parent button h2 {
+    padding: 0 45px;
+    font-family: inter;
+    color: #FFFFFF;
+}
+
+.nav-right-button-parent button {
+    border-radius: 15px;
+    background-color: #1D4ED8;
+    border: #1D4ED8;
+}
+
+
+
+/* Hero section style */
+
+/* parent */
+.hero-parent {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.9)),
+        url('../assets/banner.jpg');
+    height: 899px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* content text */
+.hero-content-text {
+    color: #FFFFFF;
+    margin-top: 50px;
+}
+
+.hero-content-text h1 {
+    text-align: center;
+    font-size: 95px;
+    font-family: inter;
+    margin-bottom: 20px;
+}
+
+.hero-content-text p {
+    text-align: center;
+    width: 1000px;
+    font-size: 27px;
+    font-family: inter;
+}
+
+/* hero-content-button */
+.hero-content-button {
+    margin-bottom: 78px;
+}
+
+.hero-content-button button {
+    border-radius: 10px;
+    background-color: #1D4ED8;
+    padding: 0 60px;
+    border: #1D4ED8;
+}
+
+.hero-content-button h1 {
+    font-family: inter;
+    color: #FFFFFF;
+}
+
+
+
+/* Meet the speakers section style */
