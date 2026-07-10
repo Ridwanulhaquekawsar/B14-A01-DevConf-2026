@@ -154,5 +154,6 @@ nav {
 
 /* meet-the-speakers-cards-parent style */
 .meet-the-speakers-cards-parent {
-    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
