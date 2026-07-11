@@ -26,6 +26,245 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        
+
+
+/* AL Suggested section style */
+
+
+  body{ margin:0; padding:0; background:#fff; }
+ 
+  /* ============================================
+     AI SUGGESTED SECTION — "DevConf Hackathon Arena"
+     Pure HTML/CSS. Reuses the page's existing patterns:
+     - the big-number treatment from the pricing cards
+     - a single dark "spotlight" card among white ones
+     - the same button markup (<button><h2>...</h2></button>)
+     ============================================ */
+ 
+  .hackathon-arena-root{
+    max-width: 1620px;
+    margin: 40px auto 100px;
+  }
+ 
+  .hackathon-arena-root > h1{
+    text-align: center;
+    font-family: inter;
+    font-size: 58px;
+    color: #0D1B2A;
+    margin-bottom: 0;
+  }
+ 
+  .hackathon-arena-root > p{
+    text-align: center;
+    font-family: inter;
+    font-size: 18px;
+    color: #575757;
+    margin: 14px 0 35px;
+  }
+ 
+  /* total prize pool banner */
+  .arena-pool-banner{
+    max-width: 620px;
+    margin: 0 auto 55px;
+    text-align: center;
+    background: #0D1B2A;
+    border-radius: 15px;
+    padding: 18px 20px;
+  }
+ 
+  .arena-pool-banner .amount{
+    font-family: inter;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-right: 10px;
+  }
+ 
+  .arena-pool-banner .label{
+    font-family: inter;
+    font-size: 14px;
+    color: #93C5FD;
+    letter-spacing: 0.3px;
+  }
+ 
+  /* cards grid */
+  .hackathon-arena-cards-parent{
+    max-width: 1620px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin: 10px auto;
+  }
+ 
+  .arena-card{
+    border: 1px solid #E5E7EB;
+    border-radius: 15px;
+    background: #FFFFFF;
+    padding: 28px 24px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .arena-card-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+ 
+  .arena-index{
+    font-family: inter;
+    font-size: 13px;
+    font-weight: 600;
+    color: #93C5FD;
+  }
+ 
+  .arena-tag{
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563EB;
+    background: rgba(37,99,235,0.08);
+    border-radius: 20px;
+    padding: 5px 12px;
+  }
+ 
+  .arena-card h3{
+    font-family: inter;
+    font-size: 21px;
+    color: #0D1B2A;
+    margin: 0 0 10px;
+  }
+ 
+  .arena-card p{
+    font-family: inter;
+    font-size: 14.5px;
+    color: #575757;
+    line-height: 1.55;
+    margin: 0 0 20px;
+    flex-grow: 1;
+  }
+ 
+  .arena-stack{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+ 
+  .arena-stack span{
+    font-family: inter;
+    font-size: 12px;
+    color: #575757;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 4px 12px;
+  }
+ 
+  .arena-prize{
+    border-top: 1px solid #E5E7EB;
+    padding-top: 16px;
+    margin-bottom: 18px;
+  }
+ 
+  .arena-prize .p1{
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 600;
+    color: #888888;
+    letter-spacing: 0.5px;
+    margin: 0 0 4px;
+  }
+ 
+  .arena-prize h2{
+    font-family: inter;
+    font-size: 32px;
+    color: #0D1B2A;
+    margin: 0;
+  }
+ 
+  .arena-card button{
+    border-radius: 10px;
+    background-color: #1D4ED8;
+    border: #1D4ED8;
+    cursor: pointer;
+    padding: 0;
+  }
+ 
+  .arena-card button h2{
+    font-family: inter;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    padding: 13px 0;
+  }
+ 
+  /* featured / toughest arena card */
+  .arena-card.featured{
+    background: #0D1B2A;
+    border-color: #0D1B2A;
+  }
+ 
+  .arena-card.featured .arena-index{ color: #93C5FD; }
+ 
+  .arena-card.featured .arena-tag{
+    color: #93C5FD;
+    background: rgba(147,197,253,0.12);
+  }
+ 
+  .arena-card.featured h3{ color: #FFFFFF; }
+  .arena-card.featured p{ color: #93C5FD; }
+ 
+  .arena-card.featured .arena-stack span{
+    color: #DCE8F5;
+    border-color: rgba(255,255,255,0.15);
+  }
+ 
+  .arena-card.featured .arena-prize{
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+ 
+  .arena-card.featured .arena-prize .p1{ color: #93C5FD; }
+  .arena-card.featured .arena-prize h2{ color: #FFFFFF; }
+ 
+  .arena-card.featured button{
+    background-color: #FFFFFF;
+  }
+ 
+  .arena-card.featured button h2{ color: #0D1B2A; font-weight: 600; }
+ 
+  /* hover lift, no JS needed */
+  .arena-card{
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+ 
+  .arena-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -20px rgba(13,27,42,0.25);
+  }
+ 
+  @media (prefers-reduced-motion: reduce){
+    .arena-card{ transition: none; }
+    .arena-card:hover{ transform: none; }
+  }
+ 
+  @media (max-width: 1200px){
+    .hackathon-arena-cards-parent{ grid-template-columns: repeat(2, 1fr); }
+  }
+ 
+  @media (max-width: 640px){
+    .hackathon-arena-root > h1{ font-size: 32px; }
+    .hackathon-arena-cards-parent{ grid-template-columns: 1fr; }
+    .arena-pool-banner .amount{ font-size: 26px; }
+  }
+</style>
+<!-- AI Suggested section style -->
+
 </head>
 
 <body>
@@ -204,11 +443,101 @@
 
 
 
-    <!-- AI Suggested section start -->
-    <section>
-        
-    </section>
-    <!-- AI Suggested section end -->
+  <!-- AI Suggested section start -->
+  <section class="hackathon-arena-root">
+    <h1>DevConf Hackathon Arena</h1>
+    <p>Four arenas. 48 hours. One shot to ship something that matters.</p>
+ 
+    <div class="arena-pool-banner">
+      <span class="amount">$28,500</span>
+      <span class="label">IN TOTAL PRIZES ACROSS FOUR ARENAS</span>
+    </div>
+ 
+    <div class="hackathon-arena-cards-parent">
+ 
+      <!-- Arena 01 -->
+      <div class="arena-card">
+        <div class="arena-card-head">
+          <span class="arena-index">01</span>
+          <span class="arena-tag">AI / ML</span>
+        </div>
+        <h3>The Autonomy Arena</h3>
+        <p>Build an agent that can plan, act, and recover from its own mistakes — live, with no safety net.</p>
+        <div class="arena-stack">
+          <span>Python</span>
+          <span>LLMs</span>
+          <span>Agents</span>
+        </div>
+        <div class="arena-prize">
+          <p class="p1">PRIZE POOL</p>
+          <h2>$10,000</h2>
+        </div>
+        <button><h2>Enter This Arena</h2></button>
+      </div>
+ 
+      <!-- Arena 02 - featured -->
+      <div class="arena-card featured">
+        <div class="arena-card-head">
+          <span class="arena-index">02 · TOUGHEST ARENA</span>
+          <span class="arena-tag">Full-Stack</span>
+        </div>
+        <h3>The Ship-It Sprint</h3>
+        <p>Take an idea from an empty repo to a deployed, working URL in 24 hours flat.</p>
+        <div class="arena-stack">
+          <span>React</span>
+          <span>Node</span>
+          <span>Deploy</span>
+        </div>
+        <div class="arena-prize">
+          <p class="p1">PRIZE POOL</p>
+          <h2>$8,500</h2>
+        </div>
+        <button><h2>Enter This Arena</h2></button>
+      </div>
+ 
+      <!-- Arena 03 -->
+      <div class="arena-card">
+        <div class="arena-card-head">
+          <span class="arena-index">03</span>
+          <span class="arena-tag">Security</span>
+        </div>
+        <h3>The Siege</h3>
+        <p>Red team versus blue team. Break the system before the other side has a chance to.</p>
+        <div class="arena-stack">
+          <span>CTF</span>
+          <span>Pentest</span>
+          <span>Infra</span>
+        </div>
+        <div class="arena-prize">
+          <p class="p1">PRIZE POOL</p>
+          <h2>$6,500</h2>
+        </div>
+        <button><h2>Enter This Arena</h2></button>
+      </div>
+ 
+      <!-- Arena 04 -->
+      <div class="arena-card">
+        <div class="arena-card-head">
+          <span class="arena-index">04</span>
+          <span class="arena-tag">Open Source</span>
+        </div>
+        <h3>The Odyssey</h3>
+        <p>Land a real, merged pull request in a production open-source repo before the clock runs out.</p>
+        <div class="arena-stack">
+          <span>Git</span>
+          <span>OSS</span>
+          <span>Review</span>
+        </div>
+        <div class="arena-prize">
+          <p class="p1">PRIZE POOL</p>
+          <h2>$3,500</h2>
+        </div>
+        <button><h2>Enter This Arena</h2></button>
+      </div>
+ 
+    </div>
+  </section>
+  <!-- AI Suggested section end -->
 
 
 
