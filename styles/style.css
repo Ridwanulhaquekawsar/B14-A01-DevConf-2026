@@ -425,7 +425,14 @@ nav {
 }
 
 hr {
-    border: 2px solid dark;
+    width: calc(100% - 66px);
+    margin-left: 25px;
+    border: none;
+    border-top: 1px solid #E5E7EB;
+}
+
+.pro hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .p1 {
