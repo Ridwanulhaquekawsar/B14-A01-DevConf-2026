@@ -143,6 +143,7 @@ nav {
 .meet-the-speakers-root {
     max-width: 1770px;
     margin: 10px auto;
+    padding-bottom: 97px;
 }
 
 .meet-the-speakers-root h1 {
@@ -168,7 +169,7 @@ nav {
     width: 100%;
 }
 
-.meet-the-speakers-cards-parent > div {
+.meet-the-speakers-cards-parent>div {
     border: 1px solid #E5E7EB;
     border-radius: 10px;
     overflow: hidden;
@@ -199,6 +200,244 @@ nav {
     margin-left: 30px;
 }
 
-.meet-the-speakers-cards-parent > div {
+.meet-the-speakers-cards-parent>div {
     padding-bottom: 20px;
+}
+
+
+
+
+/* Secure Your Spot root style  */
+.secure-your-spot-root {
+    /* border: 2px solid gold; */
+    max-width: 1620px;
+    margin: 40px auto;
+}
+
+.secure-your-spot-root>h1 {
+    text-align: center;
+    font-family: inter;
+    font-size: 58px;
+    color: #0D1B2A;
+    margin-bottom: 0;
+}
+
+.secure-your-spot-root>p {
+    text-align: center;
+    font-family: inter;
+    font-size: 18px;
+    color: #575757;
+    margin-bottom: 60px;
+}
+
+
+/* secure-your-spot-cards-parent style */
+.secure-your-spot-cards-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.secure-your-spot-cards-parent li {
+    margin-bottom: 10px;
+}
+
+.secure-your-spot-cards-parent h1 {
+    font-size: 47px;
+    font-family: inter;
+    margin-left: 25px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.p2 {
+    margin-left: 25px;
+    margin-top: 0;
+}
+
+.secure-your-spot-cards-parent button {
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.secure-your-spot-cards-parent button a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: inter;
+    font-weight: 500;
+}
+
+.standard button {
+    padding: 14px 145px;
+    background-color: white;
+    border-color: #2563EB;
+    border-radius: 7px;
+    border-width: 1px;
+    margin-top: 5px;
+}
+
+.pro button {
+    padding: 15px 160px;
+    background-color: #2563EB;
+    border-color: #2563EB;
+    border-radius: 10px;
+    border-width: 1px;
+    font-family: inter;
+    margin-top: 13px;
+}
+
+.pro button a {
+    color: #FFFFFF;
+    font-family: inter;
+    font-weight: 570;
+}
+
+.pro .p2 {
+    font-family: inter;
+    color: #FFFFFF;
+    font-weight: 150;
+}
+
+.standard {
+    padding-left: 7px;
+    border-radius: 15px;
+}
+
+.standard ul li {
+    color: #333333;
+}
+
+.team ul li {
+    color: #333333;
+}
+
+.pro {
+    padding-left: 7px;
+    border-radius: 15px;
+}
+
+.pro ul li {
+    color: #FFFFFF;
+    font-family: inter;
+    font-weight: 230;
+}
+
+.pro .p2 {
+    color: #FFFFFF;
+}
+
+.team {
+    padding-left: 7px;
+    border-radius: 15px;
+}
+
+.pro h1 {
+    color: #FFFFFF;
+}
+
+.team .p2 {
+    color: #888888;
+    font-family: inter;
+    font-weight: 350;
+}
+
+.team .p1 {
+    font-family: inter;
+    font-weight: 500;
+}
+
+
+.team button {
+    padding: 15px 145px;
+    border-radius: 8px;
+    border-width: 1.8px;
+    color: #0D1B2A;
+    background-color: white;
+    border-color: #0D1B2A;
+    margin-top: 6px;
+}
+
+.team button a {
+    color: #0D1B2A;
+    font-family: inter;
+    font-weight: 560;
+}
+
+
+.standard li::marker, .pro li::marker, .team li::marker {
+    color: #2563EB;
+}
+
+
+/* Standard */
+.secure-your-spot-cards-parent .standard {
+    border: 1px solid #E5E7EB;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 430px;
+    height: 520px;
+}
+
+.secure-your-spot-cards-parent .standard .p1 {
+    color: #888888;
+    font-size: 13px;
+    font-family: inter;
+    font-weight: 570;
+}
+
+
+/* Pro card style*/
+.secure-your-spot-cards-parent .pro {
+    border: 1px solid #E5E7EB;
+    background-color: #0D1B2A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 430px;
+    height: 520px;
+}
+
+.secure-your-spot-cards-parent .pro .p1 {
+    color: #93C5FD;
+    font-family: inter;
+}
+
+/* Team card style */
+.secure-your-spot-cards-parent .team {
+    border: 1px solid #E5E7EB;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 430px;
+    height: 520px;
+}
+
+.secure-your-spot-cards-parent .team .p1 {
+    color: #888888;
+    font-family: inter;
+}
+
+hr {
+    border: 2px solid dark;
+}
+
+.p1 {
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
+
+
+
+/* Footer section style */
+.footer-section-root {
+    
 }
