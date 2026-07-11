@@ -365,7 +365,9 @@ nav {
 }
 
 
-.standard li::marker, .pro li::marker, .team li::marker {
+.standard li::marker,
+.pro li::marker,
+.team li::marker {
     color: #2563EB;
 }
 
@@ -446,5 +448,69 @@ hr {
 
 /* Footer section style */
 .footer-section-root {
-    
+    background-color: #0D1B2A;
+    padding-bottom: 30px;
+    height: 180px;
+}
+
+
+/* footer top */
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 20px auto;
+    padding-top: 30px;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+}
+
+.social-links a i {
+    font-size: 29px;
+}
+
+.footer-top a {
+    text-decoration: none;
+}
+
+.footer-section-root hr {
+    width: 1500px;
+    margin: 30px auto;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* Footer bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 30px auto;
+}
+
+.footer-bottom p {
+    color: #FFFFFF;
+    font-family: inter;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #FFFFFF;
+    font-family: inter;
+    font-weight: 100;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.footer-tmp {
+    display: flex;
+    gap: 50px;
 }
