@@ -1,6 +1,71 @@
 # AI Prompt
 
-Hey, Bro You know i am learning web development  and planning to continue it next seven month alongwith every single day 6 to seven hour coding, now i want create section where it they sudest like :  
+Hey, Bro You know i am learning web development  and planning to continue it next seven month alongwith every single day 6 to seven hour coding, now i want create section where it they suggest like :  
+
+
+1. Prompt
+
+I am building a developer conference landing page called DevConf 2026 using only HTML and CSS.
+
+The website already contains these sections:
+
+Navbar with logo, navigation links, and a register button.
+Hero section with a dark background image and blue call-to-action button.
+Speaker section with four cards.
+Pricing section with three pricing cards.
+Footer with social media icons.
+
+The design language of the website is:
+
+Main colors: dark navy (#0D1B2A), white, and blue (#2563EB).
+Google fonts: Inter and Arimo.
+Rounded cards and modern spacing.
+Professional developer-conference theme.
+No JavaScript and no CSS frameworks.
+
+I need a new AI-generated section for the assignment's placeholder section.
+
+The section must:
+
+Feel like it naturally belongs between the pricing section and the footer.
+Be more creative than a normal FAQ or newsletter section.
+Match the visual style of the rest of the website.
+Look premium and futuristic.
+Use cards, icons, and clean typography.
+Be responsive.
+
+Generate a "DevConf Hackathon Arena" section that contains:
+
+A section title and subtitle.
+Four challenge cards.
+Each card should have:
+Challenge name.
+Difficulty level.
+Prize amount.
+Small description.
+Team size.
+Add a highlighted grand-prize card.
+Use only semantic HTML and CSS.
+
+
+2. and also;
+
+Create a unique section for my DevConf 2026 landing page.
+
+Requirements:
+
+The section must fit a developer conference website.
+Use only HTML and CSS.
+Match the existing design language:
+   Dark blue and white colors.
+   Rounded cards.
+   Blue buttons.
+   Inter font.
+Make it more unique than a normal FAQ or newsletter section.
+
+Generate a "DevConf Hackathon Arena" section with four challenge cards and prize amounts.
+
+current live website link for you to see this for better understanding well :  https://ridwanulhaquekawsar.github.io/B14-A01-DevConf-2026/
 
 
 my code without you suggetion section one : 
@@ -783,24 +848,3 @@ hr {
     display: flex;
     gap: 50px;
 }   
-
-
-how uniquely i can design a section with the help  of you so that i can get more marks then other , and also my section if unique than other then they will give more marks so can give some design patter uniquly designed with fits into this devcon landing pafgge exactly
-
-
-and also;
-
-Create a unique section for my DevConf 2026 landing page.
-
-Requirements:
-
-The section must fit a developer conference website.
-Use only HTML and CSS.
-Match the existing design language:
-   Dark blue and white colors.
-   Rounded cards.
-   Blue buttons.
-   Inter font.
-Make it more unique than a normal FAQ or newsletter section.
-
-Generate a "DevConf Hackathon Arena" section with four challenge cards and prize amounts.

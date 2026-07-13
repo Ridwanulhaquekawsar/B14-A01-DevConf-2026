@@ -28,102 +28,84 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <style>
+    
         
-
-
-/* AL Suggested section style */
-
-
+<style>
   body{ margin:0; padding:0; background:#fff; }
  
   /* ============================================
-     AI SUGGESTED SECTION — "DevConf Hackathon Arena"
-     Pure HTML/CSS. Reuses the page's existing patterns:
-     - the big-number treatment from the pricing cards
-     - a single dark "spotlight" card among white ones
-     - the same button markup (<button><h2>...</h2></button>)
+     AI SUGGESTED SECTION — "DevConf Hackathon Arena" v2
+     Semantic HTML + CSS only, no JS.
      ============================================ */
  
-  .hackathon-arena-root{
+  .arena-root{
     max-width: 1620px;
-    margin: 40px auto 100px;
+    margin: 100px auto;
+    padding: 0 20px;
   }
  
-  .hackathon-arena-root > h1{
+  .arena-root > header{
     text-align: center;
+    margin-bottom: 50px;
+  }
+ 
+  .arena-root > header h2{
     font-family: inter;
     font-size: 58px;
     color: #0D1B2A;
-    margin-bottom: 0;
+    margin: 0 0 14px;
   }
  
-  .hackathon-arena-root > p{
-    text-align: center;
+  .arena-root > header p{
     font-family: inter;
     font-size: 18px;
     color: #575757;
-    margin: 14px 0 35px;
+    max-width: 640px;
+    margin: 0 auto;
   }
  
-  /* total prize pool banner */
-  .arena-pool-banner{
-    max-width: 620px;
-    margin: 0 auto 55px;
-    text-align: center;
-    background: #0D1B2A;
-    border-radius: 15px;
-    padding: 18px 20px;
-  }
- 
-  .arena-pool-banner .amount{
-    font-family: inter;
-    font-size: 32px;
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-right: 10px;
-  }
- 
-  .arena-pool-banner .label{
-    font-family: inter;
-    font-size: 14px;
-    color: #93C5FD;
-    letter-spacing: 0.3px;
-  }
- 
-  /* cards grid */
-  .hackathon-arena-cards-parent{
-    max-width: 1620px;
+  /* ---------- challenge card grid ---------- */
+  .arena-grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
-    margin: 10px auto;
+    gap: 26px;
+    margin-bottom: 40px;
   }
  
   .arena-card{
+    position: relative;
     border: 1px solid #E5E7EB;
     border-radius: 15px;
     background: #FFFFFF;
-    padding: 28px 24px 26px;
+    padding: 30px 24px 26px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
  
-  .arena-card-head{
+  .arena-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -22px rgba(13,27,42,0.28);
+  }
+ 
+  .arena-icon{
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(37,99,235,0.08);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 18px;
+    justify-content: center;
+    margin-bottom: 20px;
   }
  
-  .arena-index{
-    font-family: inter;
-    font-size: 13px;
-    font-weight: 600;
-    color: #93C5FD;
+  .arena-icon svg{
+    width: 22px;
+    height: 22px;
+    color: #2563EB;
   }
  
-  .arena-tag{
+  .arena-category{
     font-family: inter;
     font-size: 12px;
     font-weight: 600;
@@ -131,6 +113,9 @@
     background: rgba(37,99,235,0.08);
     border-radius: 20px;
     padding: 5px 12px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 14px;
   }
  
   .arena-card h3{
@@ -140,112 +125,223 @@
     margin: 0 0 10px;
   }
  
-  .arena-card p{
+  .arena-card p.arena-desc{
     font-family: inter;
-    font-size: 14.5px;
+    font-size: 14px;
     color: #575757;
     line-height: 1.55;
     margin: 0 0 20px;
     flex-grow: 1;
   }
  
-  .arena-stack{
+  /* difficulty meter */
+  .arena-meta-row{
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 22px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
  
-  .arena-stack span{
+  .arena-meta-label{
     font-family: inter;
-    font-size: 12px;
-    color: #575757;
-    border: 1px solid #E5E7EB;
-    border-radius: 20px;
-    padding: 4px 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #888888;
+    letter-spacing: 0.4px;
   }
+ 
+  .difficulty-meter{
+    display: flex;
+    gap: 4px;
+  }
+ 
+  .difficulty-meter span{
+    width: 16px;
+    height: 5px;
+    border-radius: 3px;
+    background: #E5E7EB;
+  }
+ 
+  .difficulty-meter span.filled{ background: #2563EB; }
+ 
+  .arena-team{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: inter;
+    font-size: 13.5px;
+    color: #575757;
+    margin-bottom: 20px;
+  }
+ 
+  .arena-team svg{ width: 14px; height: 14px; color: #2563EB; }
  
   .arena-prize{
     border-top: 1px solid #E5E7EB;
     padding-top: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
  
   .arena-prize .p1{
     font-family: inter;
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 600;
     color: #888888;
     letter-spacing: 0.5px;
     margin: 0 0 4px;
   }
  
-  .arena-prize h2{
+  .arena-prize h4{
     font-family: inter;
-    font-size: 32px;
+    font-size: 30px;
     color: #0D1B2A;
     margin: 0;
+    font-weight: 700;
   }
  
   .arena-card button{
     border-radius: 10px;
     background-color: #1D4ED8;
-    border: #1D4ED8;
+    border: none;
     cursor: pointer;
-    padding: 0;
+    padding: 13px 0;
   }
  
-  .arena-card button h2{
+  .arena-card button span{
     font-family: inter;
     color: #FFFFFF;
     font-size: 15px;
     font-weight: 500;
-    margin: 0;
-    padding: 13px 0;
   }
  
-  /* featured / toughest arena card */
+  /* featured challenge card */
   .arena-card.featured{
     background: #0D1B2A;
     border-color: #0D1B2A;
   }
  
-  .arena-card.featured .arena-index{ color: #93C5FD; }
- 
-  .arena-card.featured .arena-tag{
-    color: #93C5FD;
-    background: rgba(147,197,253,0.12);
-  }
- 
+  .arena-card.featured .arena-icon{ background: rgba(147,197,253,0.12); }
+  .arena-card.featured .arena-icon svg{ color: #93C5FD; }
+  .arena-card.featured .arena-category{ color: #93C5FD; background: rgba(147,197,253,0.12); }
   .arena-card.featured h3{ color: #FFFFFF; }
-  .arena-card.featured p{ color: #93C5FD; }
- 
-  .arena-card.featured .arena-stack span{
-    color: #DCE8F5;
-    border-color: rgba(255,255,255,0.15);
-  }
- 
-  .arena-card.featured .arena-prize{
-    border-top: 1px solid rgba(255,255,255,0.15);
-  }
- 
+  .arena-card.featured p.arena-desc{ color: #B9C4D4; }
+  .arena-card.featured .arena-meta-label{ color: #93C5FD; }
+  .arena-card.featured .difficulty-meter span{ background: rgba(255,255,255,0.15); }
+  .arena-card.featured .difficulty-meter span.filled{ background: #93C5FD; }
+  .arena-card.featured .arena-team{ color: #DCE8F5; }
+  .arena-card.featured .arena-team svg{ color: #93C5FD; }
+  .arena-card.featured .arena-prize{ border-top: 1px solid rgba(255,255,255,0.15); }
   .arena-card.featured .arena-prize .p1{ color: #93C5FD; }
-  .arena-card.featured .arena-prize h2{ color: #FFFFFF; }
+  .arena-card.featured .arena-prize h4{ color: #FFFFFF; }
+  .arena-card.featured button{ background-color: #FFFFFF; }
+  .arena-card.featured button span{ color: #0D1B2A; font-weight: 600; }
  
-  .arena-card.featured button{
-    background-color: #FFFFFF;
+  .arena-badge{
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: #2563EB;
+    color: #FFFFFF;
+    font-family: inter;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 6px 14px;
+    border-radius: 20px;
   }
  
-  .arena-card.featured button h2{ color: #0D1B2A; font-weight: 600; }
- 
-  /* hover lift, no JS needed */
-  .arena-card{
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* ---------- grand prize card ---------- */
+  .grand-prize-card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #0D1B2A 0%, #16273D 100%);
+    border-radius: 18px;
+    padding: 46px 50px;
+    overflow: hidden;
   }
  
-  .arena-card:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px -20px rgba(13,27,42,0.25);
+  .grand-prize-card::after{
+    content: "";
+    position: absolute;
+    top: -60%;
+    right: -10%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(37,99,235,0.35) 0%, transparent 70%);
+    pointer-events: none;
+  }
+ 
+  .grand-prize-left{ position: relative; max-width: 620px; }
+ 
+  .grand-prize-eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inter;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    color: #FBBF24;
+    margin-bottom: 16px;
+  }
+ 
+  .grand-prize-eyebrow svg{ width: 15px; height: 15px; }
+ 
+  .grand-prize-left h3{
+    font-family: inter;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin: 0 0 14px;
+  }
+ 
+  .grand-prize-left p{
+    font-family: inter;
+    font-size: 15.5px;
+    color: #B9C4D4;
+    line-height: 1.6;
+    margin: 0;
+  }
+ 
+  .grand-prize-right{
+    position: relative;
+    text-align: center;
+    flex-shrink: 0;
+  }
+ 
+  .grand-prize-right .p1{
+    font-family: inter;
+    font-size: 12px;
+    font-weight: 600;
+    color: #93C5FD;
+    letter-spacing: 0.6px;
+    margin: 0 0 6px;
+  }
+ 
+  .grand-prize-right h4{
+    font-family: inter;
+    font-size: 46px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 18px;
+  }
+ 
+  .grand-prize-right button{
+    border-radius: 10px;
+    background-color: #2563EB;
+    border: none;
+    cursor: pointer;
+    padding: 14px 34px;
+  }
+ 
+  .grand-prize-right button span{
+    font-family: inter;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
   }
  
   @media (prefers-reduced-motion: reduce){
@@ -254,13 +350,19 @@
   }
  
   @media (max-width: 1200px){
-    .hackathon-arena-cards-parent{ grid-template-columns: repeat(2, 1fr); }
+    .arena-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+ 
+  @media (max-width: 900px){
+    .grand-prize-card{ flex-direction: column; text-align: center; gap: 24px; padding: 40px 28px; }
+    .grand-prize-left{ max-width: 100%; }
   }
  
   @media (max-width: 640px){
-    .hackathon-arena-root > h1{ font-size: 32px; }
-    .hackathon-arena-cards-parent{ grid-template-columns: 1fr; }
-    .arena-pool-banner .amount{ font-size: 26px; }
+    .arena-root > header h2{ font-size: 32px; }
+    .arena-grid{ grid-template-columns: 1fr; }
+    .grand-prize-left h3{ font-size: 24px; }
+    .grand-prize-right h4{ font-size: 34px; }
   }
 </style>
 <!-- AI Suggested section style -->
@@ -444,98 +546,123 @@
 
 
   <!-- AI Suggested section start -->
-  <section class="hackathon-arena-root">
-    <h1>DevConf Hackathon Arena</h1>
-    <p>Four arenas. 48 hours. One shot to ship something that matters.</p>
+  <section class="arena-root">
+    <header>
+      <h2>DevConf Hackathon Arena</h2>
+      <p>Four arenas, one grand prize, and 48 hours to prove what you can build. $43,500 across five awards.</p>
+    </header>
  
-    <div class="arena-pool-banner">
-      <span class="amount">$28,500</span>
-      <span class="label">IN TOTAL PRIZES ACROSS FOUR ARENAS</span>
-    </div>
+    <div class="arena-grid">
  
-    <div class="hackathon-arena-cards-parent">
- 
-      <!-- Arena 01 -->
-      <div class="arena-card">
-        <div class="arena-card-head">
-          <span class="arena-index">01</span>
-          <span class="arena-tag">AI / ML</span>
-        </div>
+      <!-- Arena 01 - featured -->
+      <article class="arena-card featured">
+        <span class="arena-badge">HIGHEST STAKES</span>
+        <div class="arena-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><line x1="9" y1="2" x2="9" y2="6"/><line x1="15" y1="2" x2="15" y2="6"/><line x1="9" y1="18" x2="9" y2="22"/><line x1="15" y1="18" x2="15" y2="22"/><line x1="2" y1="9" x2="6" y2="9"/><line x1="2" y1="15" x2="6" y2="15"/><line x1="18" y1="9" x2="22" y2="9"/><line x1="18" y1="15" x2="22" y2="15"/></svg></div>
+        <span class="arena-category">AI / ML</span>
         <h3>The Autonomy Arena</h3>
-        <p>Build an agent that can plan, act, and recover from its own mistakes — live, with no safety net.</p>
-        <div class="arena-stack">
-          <span>Python</span>
-          <span>LLMs</span>
-          <span>Agents</span>
-        </div>
-        <div class="arena-prize">
-          <p class="p1">PRIZE POOL</p>
-          <h2>$10,000</h2>
-        </div>
-        <button><h2>Enter This Arena</h2></button>
-      </div>
+        <p class="arena-desc">Build an agent that can plan, act, and recover from its own mistakes — live, with no safety net.</p>
  
-      <!-- Arena 02 - featured -->
-      <div class="arena-card featured">
-        <div class="arena-card-head">
-          <span class="arena-index">02 · TOUGHEST ARENA</span>
-          <span class="arena-tag">Full-Stack</span>
+        <div class="arena-meta-row">
+          <span class="arena-meta-label">DIFFICULTY: EXPERT</span>
         </div>
-        <h3>The Ship-It Sprint</h3>
-        <p>Take an idea from an empty repo to a deployed, working URL in 24 hours flat.</p>
-        <div class="arena-stack">
-          <span>React</span>
-          <span>Node</span>
-          <span>Deploy</span>
+        <div class="difficulty-meter" style="margin-bottom:18px;">
+          <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
         </div>
+ 
+        <div class="arena-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Teams of 1–2</div>
+ 
         <div class="arena-prize">
           <p class="p1">PRIZE POOL</p>
-          <h2>$8,500</h2>
+          <h4>$10,000</h4>
         </div>
-        <button><h2>Enter This Arena</h2></button>
-      </div>
+        <button><span>Enter This Arena</span></button>
+      </article>
+ 
+      <!-- Arena 02 -->
+      <article class="arena-card">
+        <div class="arena-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-3 3-3-3c-1-1-2-3-2-5 0-4 2-8 5-10z"/><circle cx="12" cy="10" r="1.6"/><path d="M8 16c-2 1-3 3-3 5 2 0 4-1 5-3"/><path d="M16 16c2 1 3 3 3 5-2 0-4-1-5-3"/></svg></div>
+        <span class="arena-category">Full-Stack</span>
+        <h3>The Ship-It Sprint</h3>
+        <p class="arena-desc">Take an idea from an empty repo to a deployed, working URL in 24 hours flat.</p>
+ 
+        <div class="arena-meta-row">
+          <span class="arena-meta-label">DIFFICULTY: INTERMEDIATE</span>
+        </div>
+        <div class="difficulty-meter" style="margin-bottom:18px;">
+          <span class="filled"></span><span class="filled"></span><span></span><span></span>
+        </div>
+ 
+        <div class="arena-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Teams of 3–5</div>
+ 
+        <div class="arena-prize">
+          <p class="p1">PRIZE POOL</p>
+          <h4>$8,500</h4>
+        </div>
+        <button><span>Enter This Arena</span></button>
+      </article>
  
       <!-- Arena 03 -->
-      <div class="arena-card">
-        <div class="arena-card-head">
-          <span class="arena-index">03</span>
-          <span class="arena-tag">Security</span>
-        </div>
+      <article class="arena-card">
+        <div class="arena-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 5-3.2 8.5-7 11-3.8-2.5-7-6-7-11V5l7-3z"/></svg></div>
+        <span class="arena-category">Security</span>
         <h3>The Siege</h3>
-        <p>Red team versus blue team. Break the system before the other side has a chance to.</p>
-        <div class="arena-stack">
-          <span>CTF</span>
-          <span>Pentest</span>
-          <span>Infra</span>
+        <p class="arena-desc">Red team versus blue team. Break the system before the other side has a chance to.</p>
+ 
+        <div class="arena-meta-row">
+          <span class="arena-meta-label">DIFFICULTY: ADVANCED</span>
         </div>
+        <div class="difficulty-meter" style="margin-bottom:18px;">
+          <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
+        </div>
+ 
+        <div class="arena-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Teams of 2–3</div>
+ 
         <div class="arena-prize">
           <p class="p1">PRIZE POOL</p>
-          <h2>$6,500</h2>
+          <h4>$6,500</h4>
         </div>
-        <button><h2>Enter This Arena</h2></button>
-      </div>
+        <button><span>Enter This Arena</span></button>
+      </article>
  
       <!-- Arena 04 -->
-      <div class="arena-card">
-        <div class="arena-card-head">
-          <span class="arena-index">04</span>
-          <span class="arena-tag">Open Source</span>
-        </div>
+      <article class="arena-card">
+        <div class="arena-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></div>
+        <span class="arena-category">Open Source</span>
         <h3>The Odyssey</h3>
-        <p>Land a real, merged pull request in a production open-source repo before the clock runs out.</p>
-        <div class="arena-stack">
-          <span>Git</span>
-          <span>OSS</span>
-          <span>Review</span>
+        <p class="arena-desc">Land a real, merged pull request in a production open-source repo before the clock runs out.</p>
+ 
+        <div class="arena-meta-row">
+          <span class="arena-meta-label">DIFFICULTY: BEGINNER</span>
         </div>
+        <div class="difficulty-meter" style="margin-bottom:18px;">
+          <span class="filled"></span><span></span><span></span><span></span>
+        </div>
+ 
+        <div class="arena-team"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Teams of 1–2</div>
+ 
         <div class="arena-prize">
           <p class="p1">PRIZE POOL</p>
-          <h2>$3,500</h2>
+          <h4>$3,500</h4>
         </div>
-        <button><h2>Enter This Arena</h2></button>
-      </div>
+        <button><span>Enter This Arena</span></button>
+      </article>
  
     </div>
+ 
+    <!-- Grand Prize -->
+    <div class="grand-prize-card">
+      <div class="grand-prize-left">
+        <span class="grand-prize-eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 5H4a3 3 0 0 0 3 3"/><path d="M17 5h3a3 3 0 0 1-3 3"/></svg> GRAND PRIZE</span>
+        <h3>The Grand Slam</h3>
+        <p>Awarded to one team, across all four arenas, whose build has the most real-world impact by demo day — plus a guaranteed speaking slot at DevConf 2027 and a year of mentorship.</p>
+      </div>
+      <div class="grand-prize-right">
+        <p class="p1">TOTAL AWARD</p>
+        <h4>$15,000</h4>
+        <button><span>See Grand Prize Rules</span></button>
+      </div>
+    </div>
+ 
   </section>
   <!-- AI Suggested section end -->
 
